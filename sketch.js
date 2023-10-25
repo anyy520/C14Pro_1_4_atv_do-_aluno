@@ -4,7 +4,7 @@ var ground, invisibleGround, groundImage;
 var cloud, cloudImg;
 
 //acrescente as variaveis obstaculos
-var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
+
 
 var score;
 
@@ -16,7 +16,7 @@ function preload(){
   groundImage = loadImage("ground2.png");
   
  cloudImg = loadImage("cloud.png")
- //carregue todas imagens obstaculos ,1,2,3,4,5,6
+ // prof carregue todas imagens obstaculos ,1,2,3,4,5,6
  obstacle1 = loadImage("obstacle1.png");
  obstacle2 = loadImage("obstacle2.png");
  obstacle3 = loadImage("obstacle3.png");
@@ -79,40 +79,32 @@ function draw() {
   //gerar as nuvens
   spawnClouds()
 
-  //gerar obstáculos no chão
+  //prof gerar obstáculos no chão
   spawnObstacles();     
   drawSprites();
 }
-  //comece a função gerar obstacles
+  // aluno comece a função gerar obstacles 
   function spawnObstacles(){
-    if (frameCount % 60 === 0){
-      var obstacle = createSprite(400,165,10,40);
-      obstacle.velocityX = -6;
+    
 
   //crie obstaculos aleatorios com swith e math
    
-    var rand = Math.round(random(1,6));
+    var rand =  (random( ));
     switch(rand) {
-      case 1: obstacle.addImage(obstacle1);
-              break;
-      case 2: obstacle.addImage(obstacle2);
-              break;
-      case 3: obstacle.addImage(obstacle3);
-              break;
-      case 4: obstacle.addImage(obstacle4);
-              break;
-      case 5: obstacle.addImage(obstacle5);
-              break;
-      case 6: obstacle.addImage(obstacle6);
-              break;
+
+
+
+
+
+        
       default: break;
     }
 
 
    //atribua dimensão e tempo de vida aos obstáculos
      //atribua dimensão e tempo de vida aos obstáculos         
-    obstacle.scale = 0.5;
-    obstacle.lifetime = 300;
+
+    
  }
 }
 
@@ -130,7 +122,7 @@ function spawnClouds(){
  console.log(trex.depth); 
  console.log(cloud.depth);
 
- // 3 atribua tempo de vida à variável VAZAMENTO DE MEMORIA
+ // 3 atribua tempo de vida à variável VAZAMENTO DE MEMóRIA
   cloud.lifetime=200;
 
   //2 AJUSTAR A PROFUNDIDADE
